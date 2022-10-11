@@ -365,9 +365,9 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.desc li {
+/* .desk-item {
   max-width: 270px;
-}
+} */
 
 .desc-title {
   color: var(--title-text-color);
