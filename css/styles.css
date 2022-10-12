@@ -319,8 +319,8 @@ header {
   padding: 0;
 }
 
-.modal-btn-icon:hover,
-.modal-btn-icon:focus {
+.modal-btn:hover,
+.modal-btn:focus {
   fill: var(--accent-color);
 }
 
