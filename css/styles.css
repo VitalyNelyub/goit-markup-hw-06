@@ -319,6 +319,97 @@ header {
   padding: 0;
 }
 
+.modal-btn-icon:hover,
+.modal-btn-icon:focus {
+  fill: var(--accent-color);
+}
+
+.modal-form {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 12px;
+}
+
+.form-information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.test {
+  margin-top: 4px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.info-title {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.test-coment {
+  margin-top: 4px;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-checkbox {
+  display: block;
+  text-align: center;
+}
+
+.checkbox-title {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 30px;
+  width: 16px;
+  height: 15px;
+}
+
+.modal-doc {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.submit-modal-btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primaci-bg-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 10px 52px;
+  transition: color var(--transition-time), background-color var(--transition-time);
+}
+
 /* Міркування */
 .mind-page {
   padding-top: 94px;
@@ -719,8 +810,7 @@ header {
   padding: 10px 28px;
   min-width: 200px;
   max-height: 50px;
-  transition: color var(--transition-time), 
-  background-color var(--transition-time);
+  transition: color var(--transition-time), background-color var(--transition-time);
 }
 
 .submit-btn:hover,
