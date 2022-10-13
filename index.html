@@ -417,13 +417,11 @@
         </div>
         <div class="submit">
           <p class="footer-submit">Підпишіться на розсилку</p>
-          <form class="submit-form" name="signup_form" autocomplete="on" novalidate>
-            <label>
-              <input class="mail-box" type="email" name="email" placeholder="E-mail" />
-            </label>
+          <form class="submit-form">
+            <input class="mail-box" type="email" name="email" id="signup-mail" placeholder="E-mail" />
             <button class="submit-btn" type="submit">
               Підписатися
-              <svg class="submit-icon" width="24" height="24">
+              <svg class="submit-footer-icon" width="24" height="24">
                 <use href="./imeges/symbol-defs.svg#icon-icon-send"></use>
               </svg>
             </button>
@@ -438,36 +436,59 @@
             <use href="./imeges/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-        <!-- <div class="modal-form">
+        <form class="modal-form">
           <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="form-information" action="">
-          <label class="info-title" for="username"
-            >Ім'я
-            <svg class="info-icon" width="18" height="18"><use href="./imeges/symbol-defs.svg#icon-person-black"></use></svg>
-            <input class="test" type="text" name="username" />
-          </label>
-          <label class="info-title" for="numberphone"
-            >Телефон
-            <input class="test" type="tel" name="numberphone" />
-          </label>
-          <label class="info-title" for="email"
-            >Пошта
-            <input class="test" type="email" name="email"/>
-          </label>
-          <label class="info-title for="coment"
-            >Коментар
-            <input class="test-coment" type="text" name="coment" placeholder="Введіть текст"/>
-          </label>
-           </form>
-        </div>
-        <div>
-          <label class="modal-checkbox">
-            <input class="checkbox-title" type="checkbox" name="" value="" />
-            Погоджуюся з розсилкою та приймаю
-            <a class="modal-doc" href="">Умови договору</a>
-          </label>
+          <ul class="form-list list">
+            <li class="form-item">
+              <label class="field-text" for="user-name">Ім'я </label>
+              <input
+                class="form-field"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Степан"
+              />
+            </li>
+            <li class="form-item">
+              <label class="field-text" for="phone-number">Телефон</label>
+              <input
+                class="form-field"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder="+38-050-123-45-67"
+              />
+            </li>
+            <li class="form-item">
+              <label class="field-text" for="mail">Пошта</label>
+              <input
+                class="form-field"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="mail@gmail.com"
+              />
+            </li>
+            <li class="form-item">
+              <label class="field-text" for="comment">Коментар</label>
+              <textarea
+                class="form-field-comment"
+                name="comment"
+                id="comment"
+                rows="7"
+                placeholder="Введіть текст"
+              ></textarea>
+            </li>
+          </ul>
+          <div class="confirm">
+            <input type="checkbox" name="policy" id="policy" />
+            <label class="confirm-text" for="policy"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="confirm-doc" href="">Умови договору</a>
+            </label>
+          </div>
           <button class="submit-modal-btn" type="submit">Відправити</button>
-       </div> -->
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

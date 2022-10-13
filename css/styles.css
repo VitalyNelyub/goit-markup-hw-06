@@ -63,6 +63,14 @@ button {
   border-radius: 4px;
 }
 
+textarea {
+  resize: none;
+}
+
+::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .list {
   list-style: none;
 }
@@ -268,147 +276,6 @@ header {
   background-color: var(--bgc-btn);
 }
 
-/* Backdrop */
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition: opacity var(--transition-time);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: scaleY(0) translate(-50%, -50%);
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  transform: scaleY(1) translate(-50%, -50%);
-  transition: transform var(--transition-time);
-}
-
-.modal-btn {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: transparent;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  fill: var(--accent-color);
-}
-
-.modal-form {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.form-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  margin-bottom: 12px;
-}
-
-.form-information {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.test {
-  margin-top: 4px;
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.info-title {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--primary-text-color);
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.test-coment {
-  margin-top: 4px;
-  width: 448px;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.modal-checkbox {
-  display: block;
-  text-align: center;
-}
-
-.checkbox-title {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-  margin-bottom: 30px;
-  width: 16px;
-  height: 15px;
-}
-
-.modal-doc {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--accent-color);
-}
-
-.submit-modal-btn {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--primaci-bg-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  margin: 0 auto;
-  border-radius: 4px;
-  padding: 10px 52px;
-  transition: color var(--transition-time), background-color var(--transition-time);
-}
 
 /* Міркування */
 .mind-page {
@@ -763,9 +630,12 @@ header {
   background-color: var(--accent-color);
 }
 
+/* Форма подписки */
+ 
 .submit {
-  /* display: flex; */
-  margin-right: 12px;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
 }
 
 .footer-submit {
@@ -787,6 +657,7 @@ header {
   border-radius: 4px;
   background-color: transparent;
   color: var(--secondary-text-color);
+  padding: 16px;
 }
 
 .submit-form {
@@ -819,9 +690,168 @@ header {
   background-color: var(--bgc-btn);
 }
 
-.submit-icon {
+.submit-footer-icon {
   fill: currentColor;
 }
+
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition-time);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scaleY(0) translate(-50%, -50%);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scaleY(1) translate(-50%, -50%);
+  transition: transform var(--transition-time);
+}
+
+.modal-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: fill var(--transition-time);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--accent-color);
+}
+
+/* Форма модального окна */
+
+.modal-form {
+  width: 448px;
+  height: 342px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  padding-top: 40px;
+  margin-bottom: 12px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-field {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.form-field-comment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  height: 120px;
+}
+
+.confirm {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.confirm-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.confirm-doc {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+
+  /* вопрос */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.submit-modal-btn { 
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primaci-bg-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 10px 52px;
+  transition: color var(--transition-time), 
+  background-color var(--transition-time);
+}
+
+.submit-modal-btn:hover,
+.submit-modal-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--bgc-btn);
+}
+
 
 /* Портфоліо */
 
