@@ -276,7 +276,6 @@ header {
   background-color: var(--bgc-btn);
 }
 
-
 /* Міркування */
 .mind-page {
   padding-top: 94px;
@@ -631,7 +630,7 @@ header {
 }
 
 /* Форма подписки */
- 
+
 .submit {
   display: flex;
   margin-left: auto;
@@ -728,6 +727,7 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: scaleY(1) translate(-50%, -50%);
   transition: transform var(--transition-time);
+  padding: 40px;
 }
 
 .modal-btn {
@@ -767,7 +767,6 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  padding-top: 40px;
   margin-bottom: 12px;
 }
 
@@ -781,6 +780,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  position: relative;
 }
 
 .field-text {
@@ -790,11 +790,19 @@ header {
   color: var(--primary-text-color);
 }
 
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transition: fill var(--transition-time);
+}
+
 .form-field {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px;
+  padding-left: 42px;
+  transition: outline var(--transition-time);
 }
 
 .form-field-comment {
@@ -802,6 +810,7 @@ header {
   border-radius: 4px;
   padding: 12px;
   height: 120px;
+  transition: outline var(--transition-time);
 }
 
 .confirm {
@@ -827,7 +836,49 @@ header {
   text-underline-offset: 3px;
 }
 
-.submit-modal-btn { 
+.form-field:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.form-field:focus,
+.form-field-comment:focus {
+  outline: var(--accent-color) solid 1px;
+}
+
+
+/* Check-icon */
+.check-box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.confirm-text {
+  display: flex;
+  align-items: center;
+  gap: 8.38px;
+  margin-left: 12px;
+}
+
+.check-box-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
+}
+
+.check-box:checked + .check-box-icon {
+  background-image: url(../imeges/icon-check.svg);
+  background-size: contain;
+   background-origin: border-box;
+  border-color: var(--accent-color);
+}
+
+/* Check-icon */
+
+.submit-modal-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -842,8 +893,7 @@ header {
   margin-right: auto;
   border-radius: 4px;
   padding: 10px 52px;
-  transition: color var(--transition-time), 
-  background-color var(--transition-time);
+  transition: color var(--transition-time), background-color var(--transition-time);
 }
 
 .submit-modal-btn:hover,
@@ -851,7 +901,6 @@ header {
   color: var(--accent-color);
   background-color: var(--bgc-btn);
 }
-
 
 /* Портфоліо */
 

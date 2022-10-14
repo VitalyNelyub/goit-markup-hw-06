@@ -418,7 +418,13 @@
         <div class="submit">
           <p class="footer-submit">Підпишіться на розсилку</p>
           <form class="submit-form">
-            <input class="mail-box" type="email" name="email" id="signup-mail" placeholder="E-mail" />
+            <input
+              class="mail-box"
+              type="email"
+              name="email"
+              id="signup-mail"
+              placeholder="E-mail"
+            />
             <button class="submit-btn" type="submit">
               Підписатися
               <svg class="submit-footer-icon" width="24" height="24">
@@ -448,6 +454,9 @@
                 id="user-name"
                 placeholder="Степан"
               />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./imeges/symbol-defs.svg#icon-person-black"></use>
+              </svg>
             </li>
             <li class="form-item">
               <label class="field-text" for="phone-number">Телефон</label>
@@ -458,6 +467,9 @@
                 id="phone-number"
                 placeholder="+38-050-123-45-67"
               />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./imeges/symbol-defs.svg#icon-phone-black"></use>
+              </svg>
             </li>
             <li class="form-item">
               <label class="field-text" for="mail">Пошта</label>
@@ -468,6 +480,9 @@
                 id="mail"
                 placeholder="mail@gmail.com"
               />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./imeges/symbol-defs.svg#icon-email-black"></use>
+              </svg>
             </li>
             <li class="form-item">
               <label class="field-text" for="comment">Коментар</label>
@@ -481,9 +496,10 @@
             </li>
           </ul>
           <div class="confirm">
-            <input type="checkbox" name="policy" id="policy" />
-            <label class="confirm-text" for="policy"
-              >Погоджуюся з розсилкою та приймаю
+            <label class="confirm-text" for="policy">
+              <input class="check-box" type="checkbox" name="policy" id="policy" />
+              <span class="check-box-icon"></span>
+              Погоджуюся з розсилкою та приймаю
               <a class="confirm-doc" href="">Умови договору</a>
             </label>
           </div>
