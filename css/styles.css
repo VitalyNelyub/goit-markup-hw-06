@@ -845,7 +845,6 @@ header {
   outline: var(--accent-color) solid 1px;
 }
 
-
 /* Check-icon */
 .check-box {
   -webkit-appearance: none;
@@ -872,7 +871,7 @@ header {
 .check-box:checked + .check-box-icon {
   background-image: url(../imeges/icon-check.svg);
   background-size: contain;
-   background-origin: border-box;
+  background-origin: border-box;
   border-color: var(--accent-color);
 }
 
