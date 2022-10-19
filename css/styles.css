@@ -586,9 +586,9 @@ header {
   color: var(--accent-color);
 }
 
-.footer-soc-container {
+/* .footer-soc-container {
   margin-right: 70px;
-}
+} */
 
 .footer-soc-page {
   font-style: normal;
@@ -632,9 +632,7 @@ header {
 /* Форма подписки */
 
 .submit {
-  display: flex;
   margin-left: auto;
-  flex-direction: column;
 }
 
 .footer-submit {
@@ -753,12 +751,6 @@ header {
 
 /* Форма модального окна */
 
-.modal-form {
-  width: 448px;
-  height: 342px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .form-title {
   font-weight: 700;
@@ -802,7 +794,8 @@ header {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  transition: outline var(--transition-time);
+  outline: transparent;
+  transition: border var(--transition-time);
 }
 
 .form-field-comment {
@@ -810,7 +803,8 @@ header {
   border-radius: 4px;
   padding: 12px;
   height: 120px;
-  transition: outline var(--transition-time);
+  outline: transparent;
+  transition: border var(--transition-time);
 }
 
 .confirm {
@@ -836,13 +830,16 @@ header {
   text-underline-offset: 3px;
 }
 
-.form-field:focus + .modal-form-icon {
+.form-field:focus + .modal-form-icon,
+.form-field:hover + .modal-form-icon {
   fill: var(--accent-color);
 }
 
 .form-field:focus,
-.form-field-comment:focus {
-  outline: var(--accent-color) solid 1px;
+.form-field:hover,
+.form-field-comment:focus,
+.form-field-comment:hover {
+  border: solid 1px var(--accent-color);
 }
 
 /* Check-icon */
